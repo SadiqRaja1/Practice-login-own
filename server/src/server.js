@@ -1,7 +1,7 @@
 const express = require("express");
 const cors = require("cors")
 require("dotenv").config();
-const singupRouter = require("./routes/singup")
+const singupRouter = require("./routes/singupR")
 
 const allowedURLs = {
   origin:[process.env.Frontend_URL]
