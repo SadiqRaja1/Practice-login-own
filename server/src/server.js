@@ -1,15 +1,17 @@
 const express = require("express");
 const cors = require("cors")
-const app = express();
 require("dotenv").config();
+const singupRouter = require("./routes/singup")
 
 const allowedURLs = {
   origin:[process.env.Frontend_URL]
 }
 
+const app = express();
 app.use(cors(allowedURLs));
+app.use(express.json());
 
-console.log(process.env.Frontend_URL);
+app.use("/user", singupRouter)
 
 app.get("/", (req, res) => {
   res.send("connected to the root path");
