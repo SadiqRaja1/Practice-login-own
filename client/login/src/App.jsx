@@ -4,7 +4,7 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import { Routes, Route} from "react-router-dom";
 import Login  from "./Pages/login/Login";
-import Singup from "./Pages/singup/Singup"
+import Signup from "./Pages/signup/Signup"
 import Front from "./Pages/front/Front"
 import Header from "./Header/Header"
 
@@ -18,7 +18,7 @@ function App() {
         <Routes>
           <Route path="/" element={< Front />}/>
           <Route path="/login" element={< Login />}/>
-          <Route path="/singup" element={< Singup />}/>
+          <Route path="/signup" element={< Signup />}/>
         </Routes>
       </div>
     </>

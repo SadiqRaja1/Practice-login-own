@@ -6,10 +6,10 @@ export default function Header () {
       <div className="text-3xl">
         NotLogged In
       </div>
-      <navbar className="text-2xl">
-        <Link className="hover:text-black" to="/singup">Singup</Link>
+      <nav className="text-2xl">
+        <Link className="hover:text-black" to="/signup">Signup</Link>
         <Link className="ml-3 hover:text-black" to="/login">Login</Link>
-      </navbar>
+      </nav>
     </header>
     )
 }
