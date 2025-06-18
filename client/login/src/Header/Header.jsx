@@ -2,7 +2,7 @@ import {Link} from "react-router-dom"
 
 export default function Header () {
   return(
-    <header className="w-screen h-14 flex justify-between px-16 items-center bg-blue-600 text-white rounded-b-full">
+    <header className="w-full h-14 flex justify-between px-16 items-center bg-blue-600 text-white rounded-b-full">
       <div className="text-3xl">
         NotLogged In
       </div>

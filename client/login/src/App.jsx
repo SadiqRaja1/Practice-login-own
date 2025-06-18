@@ -13,12 +13,14 @@ function App() {
 
   return (
     <>
-      <Header />
-      <Routes>
-        <Route path="/" element={< Front />}/>
-        <Route path="/login" element={< Login />}/>
-        <Route path="/singup" element={< Singup />}/>
-      </Routes>
+      <div className='h-screen'>
+        <Header />
+        <Routes>
+          <Route path="/" element={< Front />}/>
+          <Route path="/login" element={< Login />}/>
+          <Route path="/singup" element={< Singup />}/>
+        </Routes>
+      </div>
     </>
   )
 }
