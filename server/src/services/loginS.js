@@ -1,6 +1,6 @@
 const User = require("../models/user")
 const bcrypt = require("bcrypt")
-const generateToken = require("../configuration/jwtConfig")
+const {generateToken} = require("../utils/jwtUtils")
 
 async function login (email, password) {
     const user = await User.findOne({email:email});
@@ -11,7 +11,7 @@ async function login (email, password) {
     if(!verifyPassword){
         throw error("Incorrect password")
     }
-    const token = generateToken.secretKey;
+    const token = generateToken(user);
     return token;
 }
 
