@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import axios from "axios";
+import {useNavigate} from "react-router-dom";
 
 export default function Singup () {
   
@@ -8,6 +9,8 @@ export default function Singup () {
     email:"",
     password:""
   });
+
+  const navigate = useNavigate();
 
   const [confirmPassword, setConfirmPassword] = useState("");
   
@@ -25,7 +28,7 @@ export default function Singup () {
       try{
         let URL = import.meta.env.VITE_BACKEND_URL
         let res = await axios.post(`${URL}/user/register`,data)
-        console.log(res);
+        navigate("/login")
       }catch(error){
       console.error("Some issue occured", error)
       }
