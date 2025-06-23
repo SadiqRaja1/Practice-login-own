@@ -3,6 +3,7 @@ const cors = require("cors")
 require("dotenv").config();
 const singupRouter = require("./routes/singupR")
 const loginRouter = require("./routes/loginR")
+const checkAdmin = require("./scripts/admin")
 
 const allowedURLs = {
   origin:[process.env.Frontend_URL]
@@ -11,6 +12,8 @@ const allowedURLs = {
 const app = express();
 app.use(cors(allowedURLs));
 app.use(express.json());
+
+checkAdmin.isAdminPresent();
 
 app.use("/user", singupRouter)
 app.use("/auth", loginRouter)
