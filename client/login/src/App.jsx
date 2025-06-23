@@ -12,13 +12,14 @@ function App() {
   const [count, setCount] = useState(0)
 
   return (
-    <>
+    <>  
       <div className='h-screen'>
         <Header />
         <Routes>
           <Route path="/" element={< Front />}/>
           <Route path="/login" element={< Login />}/>
           <Route path="/signup" element={< Signup />}/>
+          <Route path="/dashboard" element={< Front />}/>
         </Routes>
       </div>
     </>

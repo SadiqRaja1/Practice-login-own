@@ -50,7 +50,7 @@ export default function Singup () {
           <input type="password" id="password" placeholder="Create password" className="w-full bg-white text-black mb-3 py-1 px-2 border border-blue-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-950" name="password" value={data.password} onChange={handleChange}/>
 
           <label htmlFor="confirmPassword" className="text-xl mb-1">Confirm Password</label>
-          <input type="text" id="confirmPassword" placeholder="Confirm password" className="w-full bg-white text-black mb-3 py-1 px-2 border border-blue-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-950" name="confirmPassword" value={confirmPassword} onChange={(e) => {setConfirmPassword(e.target.value)}}/>
+          <input type="password" id="confirmPassword" placeholder="Confirm password" className="w-full bg-white text-black mb-3 py-1 px-2 border border-blue-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-950" name="confirmPassword" value={confirmPassword} onChange={(e) => {setConfirmPassword(e.target.value)}}/>
 
           <button type="sumbit" className="px-5 rounded py-1 bg-white text-black active:scale-110">Submit</button>
 
