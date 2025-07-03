@@ -4,7 +4,7 @@ require("dotenv").config();
 const singupRouter = require("./routes/singupR")
 const loginRouter = require("./routes/loginR")
 const checkAdmin = require("./scripts/admin")
-const userRouter = require("./routes/user")
+const userRouter = require("./routes/userR")
 
 const allowedURLs = {
   origin:[process.env.Frontend_URL]
