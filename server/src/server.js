@@ -4,6 +4,7 @@ require("dotenv").config();
 const singupRouter = require("./routes/singupR")
 const loginRouter = require("./routes/loginR")
 const checkAdmin = require("./scripts/admin")
+const userRouter = require("./routes/user")
 
 const allowedURLs = {
   origin:[process.env.Frontend_URL]
@@ -17,6 +18,7 @@ checkAdmin.isAdminPresent();
 
 app.use("/user", singupRouter)
 app.use("/auth", loginRouter)
+app.use("/api", userRouter)
 
 app.get("/", (req, res) => {
   res.send("connected to the root path");
